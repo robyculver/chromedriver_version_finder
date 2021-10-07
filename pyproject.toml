@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "chromedriverversion"
+version = "0.1.0"
+description = "Python Module to Download and Extract the Appropriate Version of ChromeDriver for your installed Version of Chrome"
+authors = ["Roby Culver <robyculver@gmail.com>"]
+license = "GNU GPL v3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+packaging = "^21.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/robyculver/chromedriver_version_finder/issues"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
