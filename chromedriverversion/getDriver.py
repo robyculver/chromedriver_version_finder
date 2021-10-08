@@ -7,6 +7,7 @@ from packaging import version
 import requests
 import zipfile
 import os
+import stat
 
 ##simple script to test capturing version info from multi OS types and versions
 
@@ -81,6 +82,7 @@ def getDriver(outputPath=None, deleteZip=True):
       f.close()
   with zipfile.ZipFile(zipLocation, 'r') as zip_ref:
     zip_ref.extractall(f'{outputPath}')
+  os.chmod(outputPath, stat.S_IXUSR)
   if deleteZip:
     print("Chromedriver extracted, removing zip file")
     removeZip(zipLocation)
