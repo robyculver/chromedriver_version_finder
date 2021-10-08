@@ -1,16 +1,20 @@
-[tool.poetry]
-name = "chromedriverversion"
-version = "0.2.0"
-description = "Python Module to Download and Extract the Appropriate Version of ChromeDriver for your installed Version of Chrome"
-authors = [
-	"Roby Culver <robyculver@gmail.com>"
-]
-license = "GNU GPL v3"
+[project]
+
+description = "Python Module to Download and Extract the Appropriate Version of ChromeDriver for your installed Version of Chrome, it's been tested on MacOS and Windows 10/Server 2012, 2016, and 2019.  Features to come for ubuntu and other linux installations"
 repository = "https://github.com/robyculver/chromedriver_version_finder"
 homepage = "https://github.com/robyculver/chromedriver_version_finder"
 documentation = "https://github.com/robyculver/chromedriver_version_finder"
 readme = "README.md"
 keywords = ["chromedriver", "chrome", "selenium tests"]
+
+[tool.poetry]
+name = "chromedriverversion"
+version = "0.3.0"
+description = "Python Module to Download and Extract the Appropriate Version of ChromeDriver for your installed Version of Chrome"
+authors = [
+	"Roby Culver <robyculver@gmail.com>"
+]
+license = "GPLv3"
 
 [tool.poetry.dependencies]
 python = "^3.9"

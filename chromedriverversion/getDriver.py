@@ -82,7 +82,7 @@ def getDriver(outputPath=None, deleteZip=True):
       f.close()
   with zipfile.ZipFile(zipLocation, 'r') as zip_ref:
     zip_ref.extractall(f'{outputPath}')
-  os.chmod(outputPath, stat.S_IXUSR)
+  os.chmod(zipLocation, 0o755)
   if deleteZip:
     print("Chromedriver extracted, removing zip file")
     removeZip(zipLocation)
