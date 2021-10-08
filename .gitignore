@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#chromedriver installations
+**/chromedriver
+**/chromedriver.exe
+**/chromedriver.zip
+
+#poetry files
+poetry.lock
