@@ -83,6 +83,10 @@ def getDriver(outputPath=None, deleteZip=True):
   with zipfile.ZipFile(zipLocation, 'r') as zip_ref:
     zip_ref.extractall(f'{outputPath}')
   os.chmod(zipLocation, 0o755)
+  if driverType == 'win32':
+    os.chmod(f'{outputPath}/chromedriver.exe', 0o755)
+  else:
+    os.chmod(f'{outputPath}/chromedriver', 0o755)
   if deleteZip:
     print("Chromedriver extracted, removing zip file")
     removeZip(zipLocation)
